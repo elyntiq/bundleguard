@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BundleGuard — the bundle app that can't wipe your inventory</title>
+<meta name="description" content="Bundle apps have zeroed entire Shopify stores. BundleGuard is built on Shopify's native bundle engine and never writes to your inventory. Join the waitlist.">
+<meta property="og:title" content="BundleGuard — the bundle app that can't wipe your inventory">
+<meta property="og:description" content="Bundle apps have zeroed entire Shopify stores, oversold launches and crashed checkouts. BundleGuard never writes to your inventory — architecturally incapable of the horror stories.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0b1220; --panel:#111a2e; --panel2:#0e1626; --text:#e8edf6; --muted:#9fb0c9;
+    --accent:#34d399; --accent-dark:#059669; --danger:#f87171; --border:#22304d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header{padding:26px 0;display:flex;align-items:center;gap:10px}
+  .logo{font-weight:800;font-size:1.15rem;letter-spacing:.02em}
+  .logo span{color:var(--accent)}
+  .badge{font-size:.72rem;color:var(--muted);border:1px solid var(--border);border-radius:99px;padding:2px 10px}
+  .hero{padding:56px 0 40px;text-align:center}
+  h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+  h1 em{color:var(--accent);font-style:normal}
+  .sub{margin:20px auto 0;max-width:640px;color:var(--muted);font-size:1.08rem}
+  .cta{margin:32px auto 8px;max-width:520px}
+  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  input[type=email]{flex:1;min-width:240px;padding:14px 16px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-size:1rem}
+  input[type=email]:focus{outline:2px solid var(--accent-dark)}
+  button{padding:14px 22px;border-radius:10px;border:0;background:var(--accent);color:#04291c;font-weight:700;font-size:1rem;cursor:pointer}
+  button:hover{background:#2fc08b}
+  .tiny{font-size:.8rem;color:var(--muted);margin-top:10px}
+  section{padding:44px 0;border-top:1px solid var(--border)}
+  h2{font-size:1.45rem;margin-bottom:8px;letter-spacing:-.01em}
+  .lead{color:var(--muted);margin-bottom:24px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px}
+  .card q{display:block;font-size:.98rem;quotes:"\201C" "\201D"}
+  .card .src{display:block;margin-top:12px;font-size:.78rem;color:var(--danger)}
+  .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .how .card .src{color:var(--accent)}
+  .how h3{font-size:1.02rem;margin-bottom:6px}
+  .how p{font-size:.92rem;color:var(--muted)}
+  .honest{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:18px;margin-top:24px}
+  .honest h3{font-size:1rem;margin-bottom:6px;color:var(--muted)}
+  .honest ul{margin-left:18px;color:var(--muted);font-size:.92rem}
+  .count{font-size:2.6rem;font-weight:800;color:var(--danger)}
+  footer{padding:36px 0 48px;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--border)}
+  .thanks{display:none;background:var(--panel);border:1px solid var(--accent-dark);border-radius:12px;padding:18px;max-width:520px;margin:20px auto 0;text-align:center}
+  .show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Bundle<span>Guard</span></div>
+    <div class="badge">Early access — for Shopify</div>
+  </header>
+
+  <div class="hero">
+    <h1>The bundle app that <em>can't</em> wipe your inventory.</h1>
+    <p class="sub">Bundle apps have zeroed entire stores' stock, oversold product launches and crashed checkouts. BundleGuard is built on Shopify's native bundle engine — <strong>it never writes to your inventory. Not once. It has no code path that can.</strong></p>
+    <div class="cta">
+      <form id="waitlist" action="https://formsubmit.co/rune@elyntiq.com" method="POST">
+        <input type="hidden" name="_subject" value="BundleGuard waitlist signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="https://elyntiq.github.io/bundleguard/?joined=1">
+        <input type="email" name="email" placeholder="you@yourstore.com" required>
+        <button type="submit">Get early access</button>
+      </form>
+      <p class="tiny">Founding-member pricing for the waitlist. One email at launch — reply to unsubscribe. Nothing else, ever.</p>
+      <div class="thanks" id="thanks">✅ You're on the list. We'll email you once — at launch.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>It keeps happening</h2>
+    <p class="lead">We read the one-star reviews of every major bundle app on the Shopify App Store. We stopped counting at <span style="color:var(--danger);font-weight:700">36 verified reports</span> of bundle apps corrupting store inventory.</p>
+    <div class="cards">
+      <div class="card">
+        <q>The app wiped our entire inventory and set everything to 0.</q>
+        <span class="src">Verified App Store review of a leading bundle app — May 2026</span>
+      </div>
+      <div class="card">
+        <q>All inventory is either zero or even negative. We fixed 2,000+ products by hand.</q>
+        <span class="src">Verified App Store review — June 2026</span>
+      </div>
+      <div class="card">
+        <q>It repeatedly crashed during customer checkouts, costing us tens of thousands in lost sales.</q>
+        <span class="src">Verified App Store review — May 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why BundleGuard can't do that to you</h2>
+    <p class="lead">Every app above works the same way: a background job that <em>writes</em> stock levels to your store. When it breaks — bad sync, race condition, botched update — your inventory is the casualty. BundleGuard is built differently.</p>
+    <div class="how">
+      <div class="card">
+        <h3>Shopify keeps the count</h3>
+        <p>Bundles are created through Shopify's native bundle engine. Your bundle availability is derived by Shopify itself from component stock. BundleGuard holds <strong>zero write access to your inventory.</strong></p>
+        <span class="src">The failure class is removed, not patched.</span>
+      </div>
+      <div class="card">
+        <h3>Everything the native app won't do</h3>
+        <p>Automatic price sync when component prices change. Bulk create and edit. Mix-and-match bundles. Clean component breakdown on every order for your 3PL.</p>
+        <span class="src">Power, without the write access.</span>
+      </div>
+      <div class="card">
+        <h3>Location visibility</h3>
+        <p>Shopify bundles track overall stock, not per-location — so BundleGuard <em>warns you</em> when a bundle is exposed to an empty location. Read-only, by principle.</p>
+        <span class="src">We alert. We never touch.</span>
+      </div>
+    </div>
+    <div class="honest">
+      <h3>Honest limitations (so you don't find out later)</h3>
+      <ul>
+        <li>Subscription / selling-plan bundles aren't supported — a Shopify platform limitation, not a roadmap item. If you need those, BundleGuard isn't for you.</li>
+        <li>Requires Shopify's upgraded checkout (stores still on checkout.liquid customizations are ineligible for native bundles).</li>
+        <li>Fixed bundles: up to 30 components, 3 options — Shopify's limits.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="text-align:center">
+    <h2>Never explain a zeroed warehouse again</h2>
+    <p class="lead">Join the waitlist. Founding members get launch pricing, locked.</p>
+    <form action="https://formsubmit.co/rune@elyntiq.com" method="POST" style="max-width:520px;margin:0 auto">
+      <input type="hidden" name="_subject" value="BundleGuard waitlist signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_next" value="https://elyntiq.github.io/bundleguard/?joined=1">
+      <input type="email" name="email" placeholder="you@yourstore.com" required>
+      <button type="submit">Get early access</button>
+    </form>
+  </section>
+
+  <footer>
+    Built by an independent developer who read too many one-star reviews.<br>
+    We store your email for one purpose: telling you when BundleGuard launches. Reply to any email to be removed. No cookies, no trackers on this page.
+  </footer>
+</div>
+<script>
+  if (new URLSearchParams(location.search).get('joined') === '1') {
+    document.getElementById('thanks').classList.add('show');
+    document.getElementById('thanks').scrollIntoView({behavior:'smooth', block:'center'});
+  }
+</script>
+</body>
+</html>
